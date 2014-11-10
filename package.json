@@ -1,0 +1,35 @@
+{
+  "name": "dothivify",
+  "version": "0.0.1",
+  "description": "Place digital stumbling blocks on your website to support the great cause of https://click4life.hiv/de",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marionebl/dothivify.git"
+  },
+  "contributors": [{
+    "name": "Kevin Eulenberg",
+    "email": "kevin.gzt@gmail.com",
+    "url": "http://frontend.hamburg"
+  },
+  {
+    "name": "Mario Nebl",
+    "email": "hello@mario-nebl.de",
+    "url": "http://mario-nebl.de"
+  }],
+  "keywords": [
+    "dothiv",
+    "hiv",
+    "charity"
+  ],
+  "author": {
+    "name": "dotHIV gemeinnuetziger e.V.",
+    "email": "charity@click4life.hiv",
+    "url": "https://click4life.hiv/en/c/contact"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marionebl/dothivify/issues"
+  },
+  "homepage": "https://github.com/marionebl/dothivify"
+}
