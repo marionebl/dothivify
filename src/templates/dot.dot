@@ -1,10 +1,10 @@
-<label class="{{=prefix}}-replacement-wrapper">
-	<input class="{{=prefix}}-state" type="radio" name="{{=prefix}}" />
-	<label class="{{=prefix}}-state-revert-trigger" for="{{=prefix}}-state-revert"></label>
-	<aside class="{{=prefix}}-replacement-aside">
-		<div>{{=text}}</div>
-		<a class="{{=prefix}}-cta" href="{{=buttonHref}}" target="{{=buttonTarget}}">
-			{{=buttonText}}
+<label class="{{=it.prefix}}-replacement-wrapper">
+	<input class="{{=it.prefix}}-state" type="radio" name="{{=it.prefix}}" />
+	<label class="{{=it.prefix}}-state-revert-trigger" for="{{=it.prefix}}-state-revert"></label>
+	<aside class="{{=it.prefix}}-replacement-aside">
+		<div>{{=it.text}}</div>
+		<a class="{{=it.prefix}}-cta" href="{{=it.buttonHref}}" target="{{=it.buttonTarget}}">
+			{{=it.buttonText}}
 		</a>
 	</aside>
 </label>'

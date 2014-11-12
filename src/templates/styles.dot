@@ -1,37 +1,37 @@
-	return .{{=prefix}}-replacement-wrapper{
+	return .{{=it.prefix}}-replacement-wrapper{
 			position: relative;
 			display: inline-block;
-			height: {{=diameter}};
-			width: {{=diameter}};
+			height: {{=it.diameter}};
+			width: {{=it.diameter}};
 			margin: 1px;
 			vertical-align: bottom;
-			background: {{=dotBackground}};
+			background: {{=it.dotBackground}};
 			border-radius: 100%;
 		}
-		.{{=prefix}}-state{
+		.{{=it.prefix}}-state{
 			position: fixed;
 			top: 0;
 			left: -100000px;
 		}
-		.{{=prefix}}-state-revert{
+		.{{=it.prefix}}-state-revert{
 			display: none;
 		}
-		.{{=prefix}}-replacement-aside{
+		.{{=it.prefix}}-replacement-aside{
 			display: none;
 			z-index: 100001;
 			box-sizing: border-box;
 			position: absolute;
-			bottom: {{=offset}};
+			bottom: {{=it.offset}};
 			left: 50%;
 			width: 200px;
 			margin-left: -100px;
 			padding: 5px;
-			background: {{=popoverBackground}};
-			color: {{=popoverColor}};
+			background: {{=it.popoverBackground}};
+			color: {{=it.popoverColor}};
 			font-family: Arial, Verdana, sans-serif;
 			font-size: 12px;
 		}
-		.{{=prefix}}-state:checked + .{{=prefix}}-state-revert-trigger{
+		.{{=it.prefix}}-state:checked + .{{=it.prefix}}-state-revert-trigger{
 			position: fixed;
 			z-index: 100000;
 			top: 0;
@@ -39,10 +39,10 @@
 			bottom: 0;
 			left: 0;
 		}
-		.{{=prefix}}-state:checked ~ .{{=prefix}}-replacement-aside{
+		.{{=it.prefix}}-state:checked ~ .{{=it.prefix}}-replacement-aside{
 			display: block;
 		}
-		.{{=prefix}}-cta{
+		.{{=it.prefix}}-cta{
 			box-sizing: border-box;
 			display: inline-block;
 			width: 100%;
@@ -56,7 +56,7 @@
 			-moz-transition: all .3s ease-in-out;
 			transition: all .3s ease-in-out;
 		}
-		.{{=prefix}}-replacement-aside::after{
+		.{{=it.prefix}}-replacement-aside::after{
 			content: '';
 			position: absolute;
 			bottom: -7px;
@@ -68,11 +68,11 @@
 			border-width: 7.5px 10px 0 10px;
 			border-color: #000000 transparent transparent transparent;
 		}
-		.{{=prefix}}-cta:hover{
+		.{{=it.prefix}}-cta:hover{
 			background: rgba(255,255,255,.6);
 		}
 		@media only screen and (max-device-width: 1024px) {
-			.{{=prefix}}-replacement-aside{
+			.{{=it.prefix}}-replacement-aside{
 				position: fixed;
 				bottom: 0;
 				right: 0;
@@ -81,7 +81,7 @@
 				width: 100%;
 				padding: 25px 15px;
 			}
-			.{{=prefix}}-cta{ d
+			.{{=it.prefix}}-cta{ d
 				margin-top: 20px;
 			}
 		};
