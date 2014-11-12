@@ -1,4 +1,5 @@
 {
+    "replaced": ".",
     "prefix": "dothiv",
     "queries": ["p", "div"],
     "diameter": "10px",

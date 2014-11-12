@@ -2,6 +2,8 @@ var defaults = require('./defaults');
 var dotHIVStyles = require('./templates/styles.dot');
 var dotHIVTemplate = require('./templates/dot.dot');
 
+var childrenTextNodes = require('./utils/children-text-nodes');
+
 function dotHIVify(config) {
 	'use strict';
 	var options = {};
@@ -40,8 +42,22 @@ function dotHIVify(config) {
 
 	// Replace all the things.
 	Array.prototype.forEach.call(els, function(el){
-		el.innerHTML = el.innerText.split('.').join(replacement);
+		Array.prototype.forEach.call(childrenTextNodes(el), function(textNode){
+			for ( var i = 0; i <= textNode.nodeValue.length; i += 1) {
+				console.log(textNode);
+				if (textNode.nodeValue[i] === options.replaced) {
+					var split = textNode.splitText(i);
+					split.nodeValue = split.nodeValue.replace('.', '');
+					var container = document.createElement('div');
+					container.innerHTML = replacement;
+					var dot = container.firstChild;
+					textNode.parentNode.insertBefore(dot, split);
+				}
+			}
+		});
 	});
 }
+
+dotHIVify({});
 
 module.exports = dotHIVify;
