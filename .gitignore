@@ -29,3 +29,9 @@ node_modules
 
 # Local test folder
 _test
+
+# Temporary folder
+.tmp
+
+# Output folder
+lib

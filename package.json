@@ -7,16 +7,30 @@
     "type": "git",
     "url": "https://github.com/marionebl/dothivify.git"
   },
-  "contributors": [{
-    "name": "Kevin Eulenberg",
-    "email": "kevin.gzt@gmail.com",
-    "url": "http://frontend.hamburg"
+  "scripts": {
+    "setup": "mkdir -p .tmp/templates && mkdir -p lib/",
+    "clean": "rm -rf .tmp/",
+    "reset": "npm run clean && rm -r lib",
+    "precompile": "mkdir -p .tmp/templates && dottojs -s src/templates -d .tmp/templates/",
+    "copy": "cp -f src/*.js .tmp/ && cp -f src/*.json .tmp/",
+    "browserify": "browserify .tmp/index.js -o lib/index.js",
+    "build-js": "npm run precompile && npm run copy && npm run browserify",
+    "minify": "ccjs lib/index.js --compilation_level=ADVANCED_OPTIMIZATIONS > lib/index.min.js",
+    "size": "echo \"JS file size: \" && pretty-bytes $(gzip-size lib/index.min.js)",
+    "build": "npm run setup && npm run build-js && npm run minify && npm run clean"
   },
-  {
-    "name": "Mario Nebl",
-    "email": "hello@mario-nebl.de",
-    "url": "http://mario-nebl.de"
-  }],
+  "contributors": [
+    {
+      "name": "Kevin Eulenberg",
+      "email": "kevin.gzt@gmail.com",
+      "url": "http://frontend.hamburg"
+    },
+    {
+      "name": "Mario Nebl",
+      "email": "hello@mario-nebl.de",
+      "url": "http://mario-nebl.de"
+    }
+  ],
   "keywords": [
     "dothiv",
     "hiv",
@@ -31,5 +45,14 @@
   "bugs": {
     "url": "https://github.com/marionebl/dothivify/issues"
   },
-  "homepage": "https://github.com/marionebl/dothivify"
+  "homepage": "https://github.com/marionebl/dothivify",
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "^6.3.2",
+    "commander": "^2.5.0",
+    "dot": "^1.0.2",
+    "gzip-size": "^1.0.0",
+    "mkdirp": "^0.5.0",
+    "pretty-bytes": "^1.0.1"
+  }
 }

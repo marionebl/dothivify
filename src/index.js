@@ -1,6 +1,6 @@
 var defaults = require('./defaults');
-var dotHIVStyles = require('./styles');
-var dotHIVTemplate = require('./html');
+var dotHIVStyles = require('./templates/styles');
+var dotHIVTemplate = require('./templates/dot');
 
 function dotHIVify(config) {
 	'use strict';
