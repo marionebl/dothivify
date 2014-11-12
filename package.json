@@ -8,16 +8,14 @@
     "url": "https://github.com/marionebl/dothivify.git"
   },
   "scripts": {
-    "setup": "mkdir -p .tmp/templates && mkdir -p lib/",
-    "clean": "rm -rf .tmp/",
-    "reset": "npm run clean && rm -r lib",
-    "precompile": "mkdir -p .tmp/templates && dottojs -s src/templates -d .tmp/templates/",
-    "copy": "cp -f src/*.js .tmp/ && cp -f src/*.json .tmp/",
-    "browserify": "browserify .tmp/index.js -o lib/index.js",
-    "build-js": "npm run precompile && npm run copy && npm run browserify",
+    "start": "npm run serve",
+    "serve": "beefy src/index.js -- -t dotify",
+    "setup": "mkdir -p lib/",
+    "reset": "rm -r lib/",
+    "browserify": "browserify src/index.js -t dotify -o lib/index.js",
     "minify": "ccjs lib/index.js --compilation_level=ADVANCED_OPTIMIZATIONS > lib/index.min.js",
     "size": "echo \"JS file size: \" && pretty-bytes $(gzip-size lib/index.min.js)",
-    "build": "npm run setup && npm run build-js && npm run minify && npm run clean"
+    "build": "npm run browserify && npm run size"
   },
   "contributors": [
     {
@@ -46,11 +44,11 @@
     "url": "https://github.com/marionebl/dothivify/issues"
   },
   "homepage": "https://github.com/marionebl/dothivify",
-  "dependencies": {},
   "devDependencies": {
+    "beefy": "^2.1.1",
     "browserify": "^6.3.2",
-    "commander": "^2.5.0",
     "dot": "^1.0.2",
+    "dotify": "0.0.2",
     "gzip-size": "^1.0.0",
     "mkdirp": "^0.5.0",
     "pretty-bytes": "^1.0.1"

@@ -1,0 +1,10 @@
+<label class="{{=prefix}}-replacement-wrapper">
+	<input class="{{=prefix}}-state" type="radio" name="{{=prefix}}" />
+	<label class="{{=prefix}}-state-revert-trigger" for="{{=prefix}}-state-revert"></label>
+	<aside class="{{=prefix}}-replacement-aside">
+		<div>{{=text}}</div>
+		<a class="{{=prefix}}-cta" href="{{=buttonHref}}" target="{{=buttonTarget}}">
+			{{=buttonText}}
+		</a>
+	</aside>
+</label>'
