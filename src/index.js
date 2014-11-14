@@ -15,16 +15,16 @@ function dotHIVify(config) {
 		}
 	}
 
-	var els = document.querySelectorAll(options.queries.join(', '));
+	var els = document.querySelectorAll(options['queries'].join(', ')); // jshint ignore: line
 	var replacement = dotHIVTemplate(options);
 	var styles = dotHIVStyles(options);
 
 	// Construct detoggle input
 	var detoggle = document.createElement('input');
 	detoggle.type = 'radio';
-	detoggle.name = options.prefix;
-	detoggle.className = options.prefix + '-state';
-	detoggle.id = options.prefix + '-state-revert';
+	detoggle.name = options['prefix']; // jshint ignore: line
+	detoggle.className = options['prefix'] + '-state'; // jshint ignore: line
+	detoggle.id = options['prefix'] + '-state-revert'; // jshint ignore: line
 
 	// Construct styling
 	var sheet = document.createElement('style');
@@ -53,7 +53,7 @@ function dotHIVify(config) {
 
 		for (var j = 0; j < textNodes.length; j += 1) {
 			var replacementNodes = [];
-			var fragments = textNodes[j].nodeValue.split(options.replaced);
+			var fragments = textNodes[j].nodeValue.split(options['replaced']); // jshint ignore: line
 			var previousChars = [];
 			var trailingChars = [];
 

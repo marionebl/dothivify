@@ -1,22 +1,22 @@
-.{{=it.prefix}}-replacement-wrapper{
+.{{=it['prefix']}}-replacement-wrapper{
 	position: relative;
 	display: inline-block;
-	height: {{=it.diameter}};
-	width: {{=it.diameter}};
+	height: {{=it['diameter']}};
+	width: {{=it['diameter']}};
 	margin: 1px;
 	vertical-align: bottom;
-	background: {{=it.dotBackground}};
+	background: {{=it['dotBackground']}};
 	border-radius: 100%;
 }
-.{{=it.prefix}}-state{
+.{{=it['prefix']}}-state{
 	position: fixed;
 	top: 0;
 	left: -100000px;
 }
-.{{=it.prefix}}-state-revert{
+.{{=it['prefix']}}-state-revert{
 	display: none;
 }
-.{{=it.prefix}}-replacement-aside{
+.{{=it['prefix']}}-replacement-aside{
 	display: none;
 	z-index: 100001;
 	box-sizing: border-box;
@@ -26,13 +26,13 @@
 	width: 200px;
 	margin-left: -100px;
 	padding: 5px;
-	background: {{=it.popoverBackground}};
+	background: {{=it['popoverBackground']}};
 	text-align: left;
-	color: {{=it.popoverColor}};
+	color: {{=it['popoverColor']}};
 	font-family: Arial, Verdana, sans-serif;
 	font-size: 12px;
 }
-.{{=it.prefix}}-state:checked + .{{=it.prefix}}-state-revert-trigger{
+.{{=it['prefix']}}-state:checked + .{{=it['prefix']}}-state-revert-trigger{
 	position: fixed;
 	z-index: 100000;
 	top: 0;
@@ -40,10 +40,10 @@
 	bottom: 0;
 	left: 0;
 }
-.{{=it.prefix}}-state:checked ~ .{{=it.prefix}}-replacement-aside{
+.{{=it['prefix']}}-state:checked ~ .{{=it['prefix']}}-replacement-aside{
 	display: block;
 }
-.{{=it.prefix}}-cta{
+.{{=it['prefix']}}-cta{
 	box-sizing: border-box;
 	display: inline-block;
 	width: 100%;
@@ -57,7 +57,7 @@
 	-moz-transition: all .3s ease-in-out;
 	transition: all .3s ease-in-out;
 }
-.{{=it.prefix}}-replacement-aside::after{
+.{{=it['prefix']}}-replacement-aside::after{
 	content: '';
 	position: absolute;
 	bottom: -7px;
@@ -69,14 +69,14 @@
 	border-width: 7.5px 10px 0 10px;
 	border-color: #000000 transparent transparent transparent;
 }
-.{{=it.prefix}}-cta{
+.{{=it['prefix']}}-cta{
 	color: #fff;
 }
-.{{=it.prefix}}-cta:hover{
+.{{=it['prefix']}}-cta:hover{
 	background: rgba(255,255,255,.6);
 }
 @media only screen and (max-device-width: 1024px) {
-	.{{=it.prefix}}-replacement-aside{
+	.{{=it['prefix']}}-replacement-aside{
 		position: fixed;
 		bottom: 0;
 		right: 0;
@@ -85,7 +85,7 @@
 		width: 100%;
 		padding: 25px 15px;
 	}
-	.{{=it.prefix}}-cta{
+	.{{=it['prefix']}}-cta{
 		margin-top: 20px;
 	}
 }
