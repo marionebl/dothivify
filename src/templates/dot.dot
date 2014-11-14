@@ -3,7 +3,7 @@
 	<label class="{{=it['prefix']}}-state-revert-trigger" for="{{=it['prefix']}}-state-revert"></label>
 	<aside class="{{=it['prefix']}}-replacement-aside">
 		<div>{{=it['text']}}</div>
-		<a class="{{=it['prefix']}}-cta" href="{{=it.buttonHref}}" target="{{=it['buttonTarget']}}">
+		<a class="{{=it['prefix']}}-cta" href="{{=it['buttonHref']}}" target="{{=it['buttonTarget']}}">
 			{{=it['buttonText']}}
 		</a>
 	</aside>
