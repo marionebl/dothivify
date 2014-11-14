@@ -81,4 +81,5 @@ function dotHIVify(config) {
 	}
 }
 
+window['dotHIVify'] = dotHIVify; // jshint ignore: line
 module.exports = dotHIVify;
