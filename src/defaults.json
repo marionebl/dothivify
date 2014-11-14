@@ -1,7 +1,7 @@
 {
     "replaced": ".",
     "prefix": "dothiv",
-    "queries": ["p", "div"],
+    "queries": ["p"],
     "diameter": "10px",
     "offset": "15px",
     "dotBackground": "#ff0000",

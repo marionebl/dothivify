@@ -30,6 +30,13 @@ function dotHIVify(config) {
 	var sheet = document.createElement('style');
 	sheet.type = 'text/css';
 
+	// Construct dot template
+	var documentFragment = document.createDocumentFragment();
+	var container = document.createElement('div');
+	container.innerHTML = replacement;
+	documentFragment.appendChild(container);
+	var dotTemplate = container.firstChild;
+
 	if (sheet.styleSheet) {
 		sheet.styleSheet.cssText = styles;
 	} else {
@@ -41,23 +48,37 @@ function dotHIVify(config) {
 	document.body.appendChild(detoggle);
 
 	// Replace all the things.
-	Array.prototype.forEach.call(els, function(el){
-		Array.prototype.forEach.call(childrenTextNodes(el), function(textNode){
-			for ( var i = 0; i <= textNode.nodeValue.length; i += 1) {
-				console.log(textNode);
-				if (textNode.nodeValue[i] === options.replaced) {
-					var split = textNode.splitText(i);
-					split.nodeValue = split.nodeValue.replace('.', '');
-					var container = document.createElement('div');
-					container.innerHTML = replacement;
-					var dot = container.firstChild;
-					textNode.parentNode.insertBefore(dot, split);
+	for (var i = 0; i < els.length; i += 1) {
+		var textNodes = childrenTextNodes(els[i]);
+
+		for (var j = 0; j < textNodes.length; j += 1) {
+			var replacementNodes = [];
+			var fragments = textNodes[j].nodeValue.split(options.replaced);
+			var previousChars = [];
+			var trailingChars = [];
+
+			for (var k = 0; k < fragments.length; k += 1) {
+				var previousChar = fragments[k - 1] ? fragments[k - 1][fragments[k - 1].length - 1] : '';
+				var trailingChar = fragments[k + 1] ? fragments[k + 1][0] : null;
+
+				previousChars.push(previousChar.match(/[a-z]/i));
+				trailingChars.push(trailingChar !== null);
+				replacementNodes.push(document.createTextNode(fragments[k]));
+			}
+
+			for (var l = 0; l < replacementNodes.length; l += 1) {
+				textNodes[j].parentNode.insertBefore(replacementNodes[l], textNodes[j]);
+
+				if (replacementNodes[l].nodeValue && previousChars[l] && trailingChars[l]) {
+					textNodes[j].parentNode.insertBefore(dotTemplate.cloneNode(true), replacementNodes[l]);
+				} else if (previousChars[l]) {
+					replacementNodes[l].nodeValue = '.' + replacementNodes[l].nodeValue;
 				}
 			}
-		});
-	});
-}
 
-dotHIVify({});
+			textNodes[j].parentNode.removeChild(textNodes[j]);
+		}
+	}
+}
 
 module.exports = dotHIVify;
