@@ -3,13 +3,16 @@
     "prefix": "dothiv",
     "queries": ["p"],
     "diameter": "4px",
-    "offset": "15px",
+    "offset": "16px",
     "dotBackground": "#ff0000",
-    "popoverBackground": "#000000",
-    "popoverColor": "#ffffff",
-    "popoverFontSize": "12px",
+    "popoverBackground": "#fff",
+    "popoverColor": "#000",
+    "popoverFontSize": "14px",
     "text": "Lorem Ipsum dolor si amnet, edipsici",
     "buttonText": "Jetzt mehr erfahren",
     "buttonHref": "https://click4life.hiv/de",
-    "buttonTarget": "_blank"
+    "buttonTarget": "_blank",
+    "buttonBackground": "#e00073",
+    "buttonHoverBackground": "#ff47a5",
+    "buttonColor": "#fff"
 }

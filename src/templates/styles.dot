@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300);
 .{{=it['prefix']}}-replacement-wrapper{
 	position: relative;
 	display: inline-block;
@@ -34,13 +35,15 @@
 	width: 200px;
 	margin-left: -100px;
 	margin-bottom: -25px;
-	padding: 5px;
+	padding: 10px;
 	opacity: 0;
 	background: {{=it['popoverBackground']}};
+	border: 1px solid #ddd;
+	box-shadow: 0 0 10px rgba(0,0,0,.15);
 	text-align: left;
+	font-size: {{=it['popoverFontSize']}};
+	font-family: 'Source Sans Pro', sans-serif;
 	color: {{=it['popoverColor']}};
-	font-family: Arial, Verdana, sans-serif;
-	font-size: 12px;
 	-webkit-transition: opacity .3s ease-in-out, margin .3s, left 0s .3s;
 	   -moz-transition: opacity .3s ease-in-out, margin .3s, left 0s .3s;
 	    -ms-transition: opacity .3s ease-in-out, margin .3s, left 0s .3s;
@@ -71,8 +74,9 @@
 	padding: 3px 5px;
 	text-align: center;
 	text-decoration: none;
-	color: inherit;
-	background: rgba(255,255,255,.4);
+	font-weight: bold;
+	color: {{=it['buttonColor']}};
+	background: {{=it['buttonBackground']}};
 	-webkit-transition: all .3s ease-in-out;
 	   -moz-transition: all .3s ease-in-out;
 	    -ms-transition: all .3s ease-in-out;
@@ -88,13 +92,25 @@
 	height: 0;
 	border-style: solid;
 	border-width: 7.5px 10px 0 10px;
-	border-color: #000000 transparent transparent transparent;
+	border-color: {{=it['popoverBackground']}} transparent transparent transparent;
+}
+.{{=it['prefix']}}-replacement-aside::before{
+	content: '';
+	position: absolute;
+	bottom: -8px;
+	left: 50%;
+	margin-left: -10px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 7.5px 10px 0 10px;
+	border-color: #ddd transparent transparent transparent;
 }
 .{{=it['prefix']}}-cta{
 	color: #fff;
 }
 .{{=it['prefix']}}-cta:hover{
-	background: rgba(255,255,255,.6);
+	background: {{=it['buttonHoverBackground']}};
 }
 @media only screen and (max-device-width: 1024px) {
 	.{{=it['prefix']}}-replacement-aside{
