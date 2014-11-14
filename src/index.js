@@ -59,7 +59,7 @@ function dotHIVify(config) {
 
 			for (var k = 0; k < fragments.length; k += 1) {
 				var previousChar = fragments[k - 1] ? fragments[k - 1][fragments[k - 1].length - 1] : '';
-				var trailingChar = fragments[k + 1] ? fragments[k + 1][0] : null;
+				var trailingChar = fragments[k + 1] ? fragments[k + 1][0] : true;
 
 				previousChars.push(previousChar.match(/[a-z]/i));
 				trailingChars.push(trailingChar !== null);
@@ -83,3 +83,4 @@ function dotHIVify(config) {
 
 window['dotHIVify'] = dotHIVify; // jshint ignore: line
 module.exports = dotHIVify;
+dotHIVify({});

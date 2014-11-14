@@ -2,7 +2,7 @@
     "replaced": ".",
     "prefix": "dothiv",
     "queries": ["p"],
-    "diameter": "10px",
+    "diameter": "4px",
     "offset": "15px",
     "dotBackground": "#ff0000",
     "popoverBackground": "#000000",
