@@ -33,18 +33,18 @@ npm run build
 ```
 
 ##### Options
-`buttonHref` - Target of the popover button
-`buttonText` - Display text of the popover button
-`diameter` - Diameter of the replacement dots
-`dotBackground` - Background color of the replacement dots
-`popoverBackground` - Background color of the popover
-`popoverFontSize` - Font size of the popover
-`popoverColor` - Text color of the popover
-`text` - Text displayed in the popover
-`buttonTarget` - `[target]` of the popover button
-`replaced` - Character to search and replace
-`queries` - `document.querySelectorAll` query strings. Matched elements text contents will be search and replaced for `replaced`
-`offset` - Offset between dots and popovers
+* `buttonHref` - Target of the popover button
+* `buttonText` - Display text of the popover button
+* `diameter` - Diameter of the replacement dots
+* `dotBackground` - Background color of the replacement dots
+* `popoverBackground` - Background color of the popover
+* `popoverFontSize` - Font size of the popover
+* `popoverColor` - Text color of the popover
+* `text` - Text displayed in the popover
+* `buttonTarget` - `[target]` of the popover button
+* `replaced` - Character to search and replace
+* `queries` - `document.querySelectorAll` query strings. Matched elements text contents will be search and replaced for `replaced`
+* `offset` - Offset between dots and popovers
 
 #### License
 dothivify is published under the MIT License. See the [License File](https://github.com/marionebl/dothivify/blob/master/LICENSE) for details.
