@@ -3,10 +3,18 @@
 	display: inline-block;
 	height: {{=it['diameter']}};
 	width: {{=it['diameter']}};
-	margin: 1px;
-	vertical-align: bottom;
+	margin: 1px 0 0 1px;
+	vertical-align: baseline;
 	background: {{=it['dotBackground']}};
-	border-radius: 100%;
+	border-radius: 50%;
+}
+.{{=it['prefix']}}-replacement-wrapper::before{
+	content: '';
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: -15px;
+	left: -15px;
 }
 .{{=it['prefix']}}-state{
 	position: fixed;
@@ -17,20 +25,26 @@
 	display: none;
 }
 .{{=it['prefix']}}-replacement-aside{
-	display: none;
 	z-index: 100001;
 	box-sizing: border-box;
 	position: absolute;
+	left: -1000px;
+	left: -200vw;
 	bottom: {{=it.offset}};
-	left: 50%;
 	width: 200px;
 	margin-left: -100px;
+	margin-bottom: -25px;
 	padding: 5px;
+	opacity: 0;
 	background: {{=it['popoverBackground']}};
 	text-align: left;
 	color: {{=it['popoverColor']}};
 	font-family: Arial, Verdana, sans-serif;
 	font-size: 12px;
+	-webkit-transition: opacity .3s ease-in-out, margin .3s, left 0s .3s;
+	   -moz-transition: opacity .3s ease-in-out, margin .3s, left 0s .3s;
+	    -ms-transition: opacity .3s ease-in-out, margin .3s, left 0s .3s;
+	        transition: opacity .3s ease-in-out, margin .3s, left 0s .3s;
 }
 .{{=it['prefix']}}-state:checked + .{{=it['prefix']}}-state-revert-trigger{
 	position: fixed;
@@ -41,7 +55,13 @@
 	left: 0;
 }
 .{{=it['prefix']}}-state:checked ~ .{{=it['prefix']}}-replacement-aside{
-	display: block;
+	left: 50%;
+	opacity: 1;
+	margin-bottom: 0;
+	-webkit-transition: opacity .3s ease-in-out, margin .3s;
+	   -moz-transition: opacity .3s ease-in-out, margin .3s;
+	    -ms-transition: opacity .3s ease-in-out, margin .3s;
+	        transition: opacity .3s ease-in-out, margin .3s;
 }
 .{{=it['prefix']}}-cta{
 	box-sizing: border-box;
@@ -54,8 +74,9 @@
 	color: inherit;
 	background: rgba(255,255,255,.4);
 	-webkit-transition: all .3s ease-in-out;
-	-moz-transition: all .3s ease-in-out;
-	transition: all .3s ease-in-out;
+	   -moz-transition: all .3s ease-in-out;
+	    -ms-transition: all .3s ease-in-out;
+	        transition: all .3s ease-in-out;
 }
 .{{=it['prefix']}}-replacement-aside::after{
 	content: '';
