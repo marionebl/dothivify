@@ -8,6 +8,7 @@
 	vertical-align: baseline;
 	background: {{=it['dotBackground']}};
 	border-radius: 50%;
+	cursor: pointer;
 }
 .{{=it['prefix']}}-replacement-wrapper::before{
 	content: '';
@@ -32,8 +33,8 @@
 	left: -1000px;
 	left: -200vw;
 	bottom: {{=it.offset}};
-	width: 200px;
-	margin-left: -100px;
+	width: 260px;
+	margin-left: -130px;
 	margin-bottom: -25px;
 	padding: 10px;
 	opacity: 0;
@@ -48,6 +49,12 @@
 	   -moz-transition: opacity .3s ease-in-out, margin .3s, left 0s .3s;
 	    -ms-transition: opacity .3s ease-in-out, margin .3s, left 0s .3s;
 	        transition: opacity .3s ease-in-out, margin .3s, left 0s .3s;
+}
+.{{=it['prefix']}}-h{
+	display: block;
+	color: {{=it['headlineColor']}};
+	font-weight: {{=it['headlineFontweight']}};
+	margin: .25em 0 .5em 0;
 }
 .{{=it['prefix']}}-state:checked + .{{=it['prefix']}}-state-revert-trigger{
 	position: fixed;
@@ -66,17 +73,18 @@
 	    -ms-transition: opacity .3s ease-in-out, margin .3s;
 	        transition: opacity .3s ease-in-out, margin .3s;
 }
-.{{=it['prefix']}}-cta{
+a.{{=it['prefix']}}-cta{
 	box-sizing: border-box;
 	display: inline-block;
 	width: 100%;
 	margin-top: 10px;
 	padding: 3px 5px;
 	text-align: center;
-	text-decoration: none;
+	text-decoration: none!important;
 	font-weight: bold;
-	color: {{=it['buttonColor']}};
+	color: {{=it['buttonColor']}}!important;
 	background: {{=it['buttonBackground']}};
+	cursor: pointer;
 	-webkit-transition: all .3s ease-in-out;
 	   -moz-transition: all .3s ease-in-out;
 	    -ms-transition: all .3s ease-in-out;
@@ -106,10 +114,10 @@
 	border-width: 7.5px 10px 0 10px;
 	border-color: #ddd transparent transparent transparent;
 }
-.{{=it['prefix']}}-cta{
+a.{{=it['prefix']}}-cta{
 	color: #fff;
 }
-.{{=it['prefix']}}-cta:hover{
+a.{{=it['prefix']}}-cta:hover{
 	background: {{=it['buttonHoverBackground']}};
 }
 @media only screen and (max-device-width: 1024px) {
