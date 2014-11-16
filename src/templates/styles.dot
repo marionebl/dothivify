@@ -123,12 +123,32 @@ a.{{=it['prefix']}}-cta:hover{
 @media only screen and (max-device-width: 1024px) {
 	.{{=it['prefix']}}-replacement-aside{
 		position: fixed;
-		bottom: 0;
 		right: 0;
+		bottom: 0;
 		left: 0;
 		margin: 0;
 		width: 100%;
+		opacity: 1;
 		padding: 25px 15px;
+		-webkit-transform: translateY(100%);
+		   -moz-transform: translateY(100%);
+		    -ms-transform: translateY(100%);
+		        transform: translateY(100%);
+		-webkit-transition: -webkit-transform .3s ease-in-out;
+		   -moz-transition: -moz-transform .3s ease-in-out;
+		    -ms-transition: -ms-transform .3s ease-in-out;
+		        transition: transform .3s ease-in-out;
+	}
+	.{{=it['prefix']}}-state:checked ~ .{{=it['prefix']}}-replacement-aside{
+		left: 0;
+		-webkit-transform: none;
+		   -moz-transform: none;
+		    -ms-transform: none;
+		        transform: none;
+		-webkit-transition: -webkit-transform .3s ease-in-out;
+		   -moz-transition: -moz-transform .3s ease-in-out;
+		    -ms-transition: -ms-transform .3s ease-in-out;
+		        transition: transform .3s ease-in-out;
 	}
 	.{{=it['prefix']}}-cta{
 		margin-top: 20px;
