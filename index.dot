@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="public/index.min.css">
+</head>
+<body class="dothiv">
+	<header class="header">
+		<a class="logo" target="_blank" href="https://click4life.hiv" title="Change to click4life.hiv">
+			.hiv
+			<img class="visual" src="public/logo.svg" width="75" height="43">
+		</a>
+	</header>
+	<main class="main">
+		<article class="hero">
+			<strong class="demo">dothivify demo. </strong>
+			<h1 class="h h0">A dot making all the difference.</h1>
+			<p class="p">You are just in the right place to help - copy the Javascript snippet below and transform every period on your website into a digital tumbling stone raising awareness and collecting donations for our struggle.</p>
+			<div class="buttonrow">
+				<label for="output" class="button">Help now</label>
+			</div>
+		</article>
+
+		<!--<input type="radio" id="entry" class="state" name="states" />
+		<div class="entry">
+			<div class="buttonrow">
+				<form class="js_generator">
+					<button type="button" class="button js_generate">Generate snippet</button>
+				</form>
+			</div>
+		</div> -->
+
+		<input type="radio" id="output" class="state" name="states" />
+		<div class="exit">
+			<ul class="steps">
+				<li>
+					<h4 class="h h3">Copy</h4>
+					<p>Hit Cmd + C to copy the code snippet below.</p>
+				</li>
+				<li>
+					<h4 class="h h3">Paste</h4>
+					<p>Paste it just before the closing &lt;body&gt; tag.</p>
+				</li>
+				<li>
+					<h4 class="h h3">Be a hero</h4>
+					<p>Cheerio! You now help the fight against AIDS.</p>
+				</li>
+			</ul>
+			<textarea class="output js_output" readonly="readonly"><script type="text/javascript">{{=it['source']}}window.dotHIVify({});</script>
+			</textarea>
+			<!-- <div class="buttonrow pullright">
+				<label for="entry" class="inline-button">Does not float your boat? Customize it.</label>
+			</div> -->
+		</div>
+
+	</main>
+	<footer class="footer">
+		<ul class="nav">
+			<li><a target="_blank" href="https://click4life.hiv/en/c/imprint">Imprint</a></li>
+			<li><a target="_blank" href="https://click4life.hiv/en/c/contact">Contact</a></li>
+			<li><a target="_blank" href="https://github.com/marionebl/dothivify">Github</a></li>
+		</ul>
+	</footer>
+	<script type="text/javascript" src="public/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+.hero{
+	margin-bottom: 50px;
+	padding: 75px @dothiv-base-x-padding @dothiv-base-y-padding @dothiv-base-x-padding;
+	text-align: center;
+	.p{
+		width: 60%;
+		display: inline-block;
+		text-align: left;
+		font-size: 15px;
+		&::after{
+			content: '';
+			width: 100%;
+			display: inline-block;
+		}
+	}
+}
+.demo{
+	display: block;
+	margin-bottom: 15px;
+	font-size: 0;
+	.dothiv-replacement-wrapper{
+		border: 1px solid @dothiv-white;
+	}
+}

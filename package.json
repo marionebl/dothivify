@@ -9,13 +9,20 @@
   },
   "scripts": {
     "start": "npm run serve",
-    "serve": "beefy src/index.js -- -t dotify",
+    "serve": "static .",
     "setup": "mkdir -p lib/",
     "reset": "rm -r lib/",
     "browserify": "browserify src/index.js -t dotify -o lib/index.js",
+    "minify-page-less": "cssmin public/index.css > public/index.min.css",
+    "minify-page-js": "ccjs public/index.js --compilation_level=ADVANCED_OPTIMIZATIONS > public/index.min.js",
+    "minify-page": "npm run minify-page-less && npm run minify-page-js",
     "minify": "ccjs lib/index.js --compilation_level=ADVANCED_OPTIMIZATIONS > lib/index.min.js",
     "size": "echo \"JS file size: \" && pretty-bytes $(gzip-size lib/index.min.js)",
-    "build": "npm run setup && npm run browserify && npm run minify && npm run size"
+    "build": "npm run setup && npm run browserify && npm run minify && npm run size",
+    "build-page-less": "lessc assets/styles/index.less | autoprefixer > public/index.css",
+    "build-page-js": "browserify assets/scripts/index.js -t dotify -o public/index.js",
+    "build-page-html": "./bin/compile-template",
+    "build-page": "npm run build && npm run build-page-less && npm run build-page-js && npm run minify-page && npm run build-page-html"
   },
   "contributors": [
     {
@@ -45,13 +52,20 @@
   },
   "homepage": "https://github.com/marionebl/dothivify",
   "devDependencies": {
+    "animated-scrollto": "^1.1.0",
+    "autoprefixer": "^4.0.0",
     "beefy": "^2.1.1",
     "browserify": "^6.3.2",
+    "cssmin": "^0.4.2",
     "dot": "^1.0.2",
     "dotify": "0.0.2",
     "gzip-size": "^1.0.0",
     "mkdirp": "^0.5.0",
     "pretty-bytes": "^1.0.1",
+    "static": "^2.0.0",
     "uglify": "^0.1.0"
+  },
+  "dependencies": {
+    "raf": "^2.0.4"
   }
 }

@@ -1,0 +1,21 @@
+.button{
+	display: inline-block;
+	background: none;
+	border: 1px solid @dothiv-white;
+	padding: @dothiv-base-y-padding/2 @dothiv-base-x-padding;
+	transition: .3s background ease-in-out;
+	font-size: 20px;
+	&:hover,
+	&:active,
+	&:focus{
+		background: fadeout(@dothiv-white, 50%);
+	}
+	&:focus{
+		outline: none;
+		box-shadow: 0 0 5px @dothiv-white;
+	}
+}
+.inline-button{
+	display: inline-block;
+	margin: 15px 0 15px auto;
+}

@@ -1,0 +1,38 @@
+.h{
+	display: block;
+	line-height: 1.15em;
+	font-weight: @dothiv-h-fontweight;
+	margin: .25em 0 .5em 0;
+}
+.h0{
+	font-size: @dothiv-h0-fontsize;
+}
+.h1{
+	font-size: @dothiv-h1-fontsize;
+}
+.h2{
+	font-size: @dothiv-h2-fontsize;
+}
+.h3{
+	font-size: @dothiv-h3-fontsize;
+}
+.h4{
+	font-size: @dothiv-h4-fontsize;
+}
+.p{
+	line-height: 1.5em;
+	margin: 0 0 1.25em 0;
+}
+a{
+	color: @dothiv-white;
+	text-decoration: none;
+	&:hover, &:active, &:focus{
+		outline: none;
+		text-decoration: none;
+		text-shadow: 0 0 5px fadeout(@dothiv-white, 5%);
+		transition: .3s text-shadow ease-in-out;
+	}
+	&:link, &:visited{
+		color: @dothiv-white;
+	}
+}
