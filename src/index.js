@@ -15,16 +15,18 @@ function dotHIVify(config) {
 		}
 	}
 
+	var prefix = options['prefix']; // jshint ignore: line
 	var els = document.querySelectorAll(options['queries'].join(', ')); // jshint ignore: line
 	var replacement = dotHIVTemplate(options);
 	var styles = dotHIVStyles(options);
+	var stateClass = prefix + '-state';
 
 	// Construct detoggle input
 	var detoggle = document.createElement('input');
 	detoggle.type = 'radio';
-	detoggle.name = options['prefix']; // jshint ignore: line
-	detoggle.className = options['prefix'] + '-state'; // jshint ignore: line
-	detoggle.id = options['prefix'] + '-state-revert'; // jshint ignore: line
+	detoggle.name = prefix;
+	detoggle.className = stateClass;
+	detoggle.id = prefix + '-state-revert';
 
 	// Construct styling
 	var sheet = document.createElement('style');
@@ -79,6 +81,55 @@ function dotHIVify(config) {
 			textNodes[j].parentNode.removeChild(textNodes[j]);
 		}
 	}
+
+	document.addEventListener('change', function(e){
+		if (window.innerWidth < 1024) {
+			return;
+		}
+
+		if (! e.target.classList.contains(stateClass)) {
+			return;
+		}
+
+		var containerEl = e.target.parentNode;
+		var asideEl = containerEl.querySelectorAll('.' + prefix + '-replacement-aside')[0];
+		var asideRect = asideEl.getBoundingClientRect();
+		var asideSpan = asideRect.width / 2;
+		var containerRect = containerEl.getBoundingClientRect();
+
+		if (! e.target.checked) {
+			window.setTimeout(function(){
+				containerEl.className = containerRect.className.replace(/down|right|left/ig, '');
+			}, 300);
+			return;
+		}
+
+		var classNames = [];
+
+		if (asideRect.height > containerRect.top) {
+			classNames.push('down');
+		}
+
+		if (asideSpan > containerRect.left) {
+			classNames.push('right');
+		} else if (asideSpan > window.innerWidth - containerRect.left) {
+			classNames.push('left');
+		}
+
+		console.log(classNames);
+
+		var containerClassName = containerEl.className;
+		console.log(containerClassName);
+
+		for (var j = 0; j < classNames.length; j += 1) {
+			if (containerClassName.indexOf(classNames[j]) === -1) {
+				containerClassName += ' ' + classNames[j];
+			}
+		}
+
+		console.log(containerClassName);
+		containerEl.className = containerClassName;
+	}, false);
 }
 
 window['dotHIVify'] = dotHIVify; // jshint ignore: line

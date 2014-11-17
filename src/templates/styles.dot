@@ -114,6 +114,40 @@ a.{{=it['prefix']}}-cta{
 	border-width: 7.5px 10px 0 10px;
 	border-color: #ddd transparent transparent transparent;
 }
+.down > .{{=it['prefix']}}-replacement-aside{
+	top: 100%;
+	bottom: auto;
+	margin-top: {{=it.offset}};
+}
+.down > .{{=it['prefix']}}-replacement-aside::after{
+	top: -7px;
+	bottom: auto;
+	border-width: 0 10px 7.5px 10px;
+	border-color: transparent transparent {{=it['popoverBackground']}} transparent;
+}
+.down > .{{=it['prefix']}}-replacement-aside::before{
+	top: -8px;
+	bottom: auto;
+	border-width: 0 10px 7.5px 10px;
+	border-color: transparent transparent #ddd transparent;
+}
+.left > .{{=it['prefix']}}-replacement-aside{
+	margin-left: -260px;
+}
+.left > .{{=it['prefix']}}-replacement-aside::after,
+.left > .{{=it['prefix']}}-replacement-aside::before{
+	left: 100%;
+	margin-left: -25px;
+}
+.right > .{{=it['prefix']}}-replacement-aside{
+	margin-left: 0;
+}
+.right > .{{=it['prefix']}}-replacement-aside::after,
+.right > .{{=it['prefix']}}-replacement-aside::before{
+	left: auto;
+	right: 100%;
+	margin-right: -25px;
+}
 a.{{=it['prefix']}}-cta{
 	color: #fff;
 }
