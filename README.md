@@ -4,10 +4,10 @@ dothivify
 Place digital stumbling blocks on your website to support the great cause of [click4life.hiv](https://click4life.hiv/de)
 
 * Support the fight against HIV
-* 2KB minified and gzipped
+* 2.73KB minified and gzipped
 
 #### What this does
-Basically, it helps you helping us making the world a tiny bit better (at 1.88Kb gzipped): dothivify replaces all dots in text content of your site with tiny stumbling blocks directing to [click4life.hiv](https://click4life.hiv/de) or the .hiv domain of your choosing. Every click on any .hiv domains generates charity spendings for initiatives supporting the fight against HIV.
+Basically, it helps you helping us making the world a tiny bit better: dothivify replaces all dots in text content of your site with tiny stumbling blocks directing to [click4life.hiv](https://click4life.hiv/de) or the .hiv domain of your choosing. Every click on any .hiv domains generates charity spendings for initiatives supporting the fight against HIV.
 
 #### Getting started
 
