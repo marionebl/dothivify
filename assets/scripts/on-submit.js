@@ -16,7 +16,7 @@ function onSubmit(e) {
 		data[el.name] = el.value;
 	});
 
-	outputEl.innerText = '<script type="text/javascript">'+ template +'dotHIVify('+ JSON.stringify(data) +');</script>';
+	outputEl.innerText = '<script type="text/javascript">'+ template +'window.dotHIVify('+ JSON.stringify(data) +');</script>';
 	exit.checked = true;
 	outputEl.focus();
 	outputEl.select();
