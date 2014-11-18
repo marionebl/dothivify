@@ -309,6 +309,60 @@ a:visited {
   text-align: center;
   border: 1px solid #fefefe;
 }
+.fieldset {
+  border: 1px solid #fefefe;
+}
+.legend {
+  font-size: 17px;
+  padding: 30px 15px;
+}
+.row {
+  display: block;
+  width: 75%;
+  margin: 0 auto 15px auto;
+}
+.label {
+  display: block;
+  padding-bottom: 5px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: bold;
+}
+.input {
+  position: relative;
+  width: 100%;
+  min-height: 35px;
+  border: 1px solid #fefefe;
+  background: #e00073;
+}
+.input.text {
+  padding: 5px 7.5px;
+}
+.input .native {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  border: none;
+}
+.input:focus,
+.native:focus {
+  outline: none;
+}
+.input:focus {
+  box-shadow: 0 0 5px #fefefe;
+}
+.color .native::-webkit-color-swatch {
+  height: 22.5px;
+  border: 1px solid #fefefe;
+}
+.entry .button {
+  width: 100%;
+  margin-top: 15px;
+}
 .button {
   display: inline-block;
   background: none;

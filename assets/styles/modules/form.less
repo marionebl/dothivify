@@ -64,3 +64,62 @@
 		}
 	}
 }
+.fieldset{
+	border: 1px solid @dothiv-white;
+}
+.legend{
+	font-size: @dothiv-h3-fontsize;
+	padding: 30px 15px;
+}
+.row{
+	display: block;
+	width: 75%;
+	margin: 0 auto 15px auto;
+}
+.label{
+	display: block;
+	padding-bottom: 5px;
+	text-align: left;
+	font-size: 14px;
+	font-weight: bold;
+}
+.input{
+	position: relative;
+	width: 100%;
+	min-height: 35px;
+	border: 1px solid @dothiv-white;
+	background: @dothiv-magenta;
+	&.text{
+		padding: 5px 7.5px;
+	}
+	.native{
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		background: transparent;
+		border: none;
+	}
+}
+.input, .native{
+	&:focus{
+		outline: none;
+	}
+}
+.input:focus{
+	box-shadow: 0 0 5px @dothiv-white;
+}
+.color{
+	.native::-webkit-color-swatch{
+		height: 22.5px;
+		border: 1px solid @dothiv-white;
+	}
+}
+.entry{
+	.button{
+		width: 100%;
+		margin-top: 15px;
+	}
+}

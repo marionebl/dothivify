@@ -3,7 +3,7 @@ var scrollTo = require('animated-scrollto');
 function onChange(e) {
 	var output = document.getElementById('output');
 
-	if (e.target.className.indexOf('state') === -1 && e.target.checked) {
+	if (e.target.className.indexOf('state') === -1 && e.target.checked !== true) {
 		return;
 	}
 

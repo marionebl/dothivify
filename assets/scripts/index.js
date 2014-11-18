@@ -1,4 +1,5 @@
 var dothivify = require('../../src/');
+var onSubmit = require('./on-submit');
 var onChange = require('./on-change');
 
 document.addEventListener('DOMContentLoaded', function(){
@@ -9,5 +10,6 @@ document.addEventListener('DOMContentLoaded', function(){
 		dotBackground: 'transparent'
 	});
 
+	document.addEventListener('submit', onSubmit, false);
 	document.addEventListener('change', onChange, false);
 });
