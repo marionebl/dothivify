@@ -4,6 +4,8 @@ var fields = form.querySelectorAll('input, select');
 var outputEl = document.querySelectorAll('.js_output')[0];
 var exit = document.getElementById('output');
 
+var defaults = require('../../src/defaults');
+
 function onSubmit(e) {
 	if (e.target.className.indexOf('js_generator') === -1) {
 		return;
@@ -16,7 +18,21 @@ function onSubmit(e) {
 		data[el.name] = el.value;
 	});
 
-	outputEl.innerText = '<script type="text/javascript">'+ template +'window.dotHIVify('+ JSON.stringify(data) +');</script>';
+	data.queries = data.queries.split(',').filter(function(item){
+		return item;
+	}).map(function(item){
+		return item.trim();
+	});
+
+	var sanitized = {};
+
+	Object.keys(data).forEach(function(key){
+		if (data[key] !== defaults[key]) {
+			sanitized[key] = data[key];
+		}
+	});
+
+	outputEl.innerText = '<script type="text/javascript">'+ template +'window.dotHIVify('+ JSON.stringify(sanitized) +');</script>';
 	exit.checked = true;
 	outputEl.focus();
 	outputEl.select();
