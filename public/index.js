@@ -141,8 +141,8 @@ module.exports={
     "diameter": "4px",
     "offset": "16px",
     "dotBackground": "#ff0000",
-    "popoverBackground": "#fff",
-    "popoverColor": "#000",
+    "popoverBackground": "#ffffff",
+    "popoverColor": "#000000",
     "popoverFontSize": "14px",
     "headline": "A dot making all the difference.",
     "headlineColor": "#e00073",
@@ -153,7 +153,7 @@ module.exports={
     "buttonTarget": "_blank",
     "buttonBackground": "#e00073",
     "buttonHoverBackground": "#ff47a5",
-    "buttonColor": "#fff"
+    "buttonColor": "#ffffff"
 }
 
 },{}],6:[function(require,module,exports){
