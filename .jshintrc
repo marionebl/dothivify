@@ -24,6 +24,7 @@
   "loopfunc": true,
   "expr": true,
   "devel": true,
+  "node": true,
   "white": true,
   "esnext": true,
   "multistr": true

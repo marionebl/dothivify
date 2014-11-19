@@ -1,3 +1,5 @@
+'use strict';
+
 var defaults = require('./defaults');
 var dotHIVStyles = require('./templates/styles.dot');
 var dotHIVTemplate = require('./templates/dot.dot');
@@ -5,7 +7,6 @@ var dotHIVTemplate = require('./templates/dot.dot');
 var childrenTextNodes = require('./utils/children-text-nodes');
 
 function dotHIVify(config) {
-	'use strict';
 	var options = {};
 
 	// (Poor man's) merge of defaults with user-provided configuration
