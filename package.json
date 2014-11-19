@@ -1,6 +1,6 @@
 {
   "name": "dothivify",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Place digital stumbling blocks on your website to support the great cause of https://click4life.hiv/de",
   "main": "lib/index.js",
   "repository": {
