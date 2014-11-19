@@ -116,10 +116,7 @@ function dotHIVify(config) {
 			classNames.push('left');
 		}
 
-		console.log(classNames);
-
 		var containerClassName = containerEl.className;
-		console.log(containerClassName);
 
 		for (var j = 0; j < classNames.length; j += 1) {
 			if (containerClassName.indexOf(classNames[j]) === -1) {
@@ -127,7 +124,6 @@ function dotHIVify(config) {
 			}
 		}
 
-		console.log(containerClassName);
 		containerEl.className = containerClassName;
 	}, false);
 }
