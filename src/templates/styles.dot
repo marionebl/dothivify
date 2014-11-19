@@ -50,6 +50,13 @@
 	    -ms-transition: opacity .3s ease-in-out, margin .3s, left 0s .3s;
 	        transition: opacity .3s ease-in-out, margin .3s, left 0s .3s;
 }
+.{{=it['prefix']}}-replacement-aside p,
+.{{=it['prefix']}}-replacement-aside h{
+	line-height: 1.5em;
+}
+.{{=it['prefix']}}-replacement-aside a{
+	line-height: 1.25em;
+}
 .{{=it['prefix']}}-h{
 	display: block;
 	color: {{=it['headlineColor']}};
