@@ -2,10 +2,9 @@
 <html class="no-js">
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>dotHIVify</title>
+	<meta name="description" content="dothiv. A dot making all the difference.">
+	<meta name="viewport" content="width=640">
 	<link rel="stylesheet" href="public/index.min.css">
 </head>
 <body class="dothiv">
