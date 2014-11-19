@@ -1,3 +1,5 @@
+'use strict';
+
 function childrenTextNodes(node) {
 	var textNodes = [];
 	for (node = node.firstChild; node; node = node.nextSibling) {
