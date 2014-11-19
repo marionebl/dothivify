@@ -1,6 +1,8 @@
 coverage
 test
 _test
+assets
+public
 nodemon.json
 .coveralls.yml
 .editorconfig
