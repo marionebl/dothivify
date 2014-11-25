@@ -144,11 +144,11 @@ module.exports={
     "popoverBackground": "#ffffff",
     "popoverColor": "#000000",
     "popoverFontSize": "14px",
-    "headline": "A dot making all the difference.",
+    "headline": "A dot makes the difference.",
     "headlineColor": "#e00073",
     "headlineFontweight": "bold",
-    "text": "For every single click on a .hiv site we donate to the fight against AIDS.",
-    "buttonText": "Help now",
+    "text": "You are just in the right place to help! Copy the Javascript snippet below and raise awareness for the .hiv campaign and its fight against AIDS – by simply transforming every dot on your website pink!",
+    "buttonText": "Help now!",
     "buttonHref": "https://click4life.hiv/en/",
     "buttonTarget": "_blank",
     "buttonBackground": "#e00073",
@@ -275,10 +275,7 @@ function dotHIVify(config) {
 			classNames.push('left');
 		}
 
-		console.log(classNames);
-
 		var containerClassName = containerEl.className;
-		console.log(containerClassName);
 
 		for (var j = 0; j < classNames.length; j += 1) {
 			if (containerClassName.indexOf(classNames[j]) === -1) {
@@ -286,7 +283,6 @@ function dotHIVify(config) {
 			}
 		}
 
-		console.log(containerClassName);
 		containerEl.className = containerClassName;
 	}, false);
 }
