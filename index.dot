@@ -143,10 +143,12 @@
 							</legend>
 							<label class="row">
 								<span class="label">If the script should only work on World Aids Day (Dec 1th)</span>
-								<select name="guardDate">
-									<option value="false" selected="selected">No</option>
-									<option value="true">Yes</option>
-								</select>
+								<div class="input select">
+									<select name="guardDate" class="native">
+										<option value="false" selected="selected">No</option>
+										<option value="true">Yes</option>
+									</select>
+								</div>
 							</label>
 							<label class="row">
 								<span class="label">Query strings to search in (comma delimited)</span>
