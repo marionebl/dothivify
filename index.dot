@@ -142,6 +142,13 @@
 								Tech
 							</legend>
 							<label class="row">
+								<span class="label">If the script should only work on World Aids Day (Dec 1th)</span>
+								<select name="guardDate">
+									<option value="false" selected="selected">No</option>
+									<option value="true">Yes</option>
+								</select>
+							</label>
+							<label class="row">
 								<span class="label">Query strings to search in (comma delimited)</span>
 								<input name="queries" type="text" class="input text" value="{{=it['fields']['queries']}}">
 							</label>

@@ -24,6 +24,8 @@ function onSubmit(e) {
 		return item.trim();
 	});
 
+	data.guardDate = data.guardDate === 'true';
+
 	var sanitized = {};
 
 	Object.keys(data).forEach(function(key){
