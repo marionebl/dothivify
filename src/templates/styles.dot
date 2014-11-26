@@ -44,6 +44,7 @@
 	text-align: left;
 	font-size: {{=it['popoverFontSize']}};
 	font-family: 'Source Sans Pro', sans-serif;
+	line-height: {{=it['popoverLineHeight']}};
 	color: {{=it['popoverColor']}};
 	-webkit-transition: opacity .3s ease-in-out, margin .3s, left 0s .3s;
 	   -moz-transition: opacity .3s ease-in-out, margin .3s, left 0s .3s;

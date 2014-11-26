@@ -4,10 +4,9 @@ var onChange = require('./on-change');
 
 document.addEventListener('DOMContentLoaded', function(){
 	dothivify({
-		queries: ['.demo'],
-		diameter: '30px',
-		offset: '35px',
-		dotBackground: 'transparent'
+		queries: ['.h0'],
+		diameter: '10px',
+		dotBackground: '#730C61'
 	});
 
 	document.addEventListener('submit', onSubmit, false);

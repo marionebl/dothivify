@@ -38,8 +38,23 @@
 	<main class="main">
 		<div class="stage">
 			<article class="hero">
-				<strong class="demo">dothivify demo. </strong>
-				<h1 class="stage-title h h0">{{=it['heroheadline']}}</h1>
+				<strong class="demo">
+					<input class="dothiv-state-revert" id="dothiv-state-revert" type="radio" name="dothiv" />
+					<label class="dothiv-replacement-wrapper">
+						<input class="dothiv-state" type="radio" name="dothiv" checked="checked"/>
+						<label class="dothiv-state-revert-trigger" for="dothiv-state-revert"></label>
+						<aside class="dothiv-replacement-aside">
+							<div>
+								<strong class="dothiv-h">{{=it['heroheadline']}}</strong>
+								The smallest billboard in the world to show your support for .hiv
+							</div>
+							<label class="dothiv-state-revert-button" for="dothiv-state-revert">
+								OK!
+							</label>
+						</aside>
+					</label>
+				</strong>
+				<h1 class="h h0 stage-title">{{=it['heroheadline']}} </h1>
 				<p class="p">{{=it['herocopy']}}</p>
 				<div class="buttonrow">
 					<label for="output" class="button">{{=it['herobutton']}}</label>

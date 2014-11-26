@@ -8,6 +8,7 @@
     "popoverBackground": "#ffffff",
     "popoverColor": "#000000",
     "popoverFontSize": "14px",
+    "popoverLineHeight": "1.25em",
     "headline": "A dot makes the difference.",
     "headlineColor": "#e00073",
     "headlineFontweight": "bold",
