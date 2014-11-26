@@ -7,9 +7,14 @@
 	overflow: hidden;
 }
 .exit{
-	margin-top: 40px;
+	height: 0;
+	max-height: 0;
+	margin-top: 0;
 	opacity: 0;
-	transition: .5s opacity ease-in-out;
+	// transistion must be max-height because height:auto can't be transitioned
+	transition: .5s opacity ease-in-out .5s,
+							1s max-height,
+							1s margin-top;
 }
 .output{
 	display: block;
@@ -33,6 +38,9 @@
 	height: auto;
 }
 .state:checked + .exit{
+	margin-top: 40px;
+	height: auto;
+	max-height: 800px;
 	opacity: 1;
 }
 .steps{
