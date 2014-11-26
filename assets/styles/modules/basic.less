@@ -3,14 +3,28 @@
 }
 .dothiv{
 	background: @dothiv-background;
-	color: @dothiv-color;
+	color: @dothiv-magenta;
 	font-family: @dothiv-font;
 	font-size: @dothiv-fontsize;
 }
-.header,
-.main,
-.footer{
-	width: @dothiv-width;
+
+.stage {
+	// background: url('../public/bg.jpg') no-repeat center center fixed;
+	background: url('../public/bg.jpg') no-repeat;
+  background-size: cover;
+  color: @dothiv-color;
+}
+
+.generator-content {
+	background-color: @dothiv-white;
+	padding-top: 50px;
+}
+
+.hero,
+.footer,
+.entry,
+.exit {
 	margin: 0 auto;
 	padding: 0 @dothiv-base-x-padding;
+	width: @dothiv-width;
 }

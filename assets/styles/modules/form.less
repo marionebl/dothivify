@@ -16,9 +16,11 @@
 	margin: 0 auto;
 	padding: 10px;
 	width: 100%;
+	max-width: 750px;
 	height: 100px;
 	border: 1px solid @dothiv-white;
-	background: rgba(52, 45, 45, 0.3);
+	color: @dothiv-white;
+	background: @dothiv-darkgrey;
 	overflow: auto;
 	font-family: "Lucida Console", Monaco, monospace;
 	font-size: 12px;
@@ -45,7 +47,7 @@
 		position: relative;
 		vertical-align: top;
 		padding: 10px 20px 10px 65px;
-		width: 20%;
+		width: 36%;
 		&:last-child{
 			padding-right: 0;
 		}
@@ -61,13 +63,15 @@
 			border-radius: 50%;
 			font-size: @dothiv-h2-fontsize;
 			text-align: center;
-			border: 1px solid @dothiv-white;
+			background-color: @dothiv-magenta;
+			color: @dothiv-white;
+			border: 1px solid @dothiv-magenta;
 		}
 		h4 {
 			padding-bottom: 4px;
 			max-width: 140px;
-			border-bottom: 1px solid #eee;
-			border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+			border-bottom: 1px solid @dothiv-lightgrey;
+			border-bottom: 1px solid @dothiv-highopacity-magenta;
 			font-weight: bold;
 		}
 		p {
@@ -76,7 +80,7 @@
 	}
 }
 .fieldset{
-	border: 1px solid @dothiv-white;
+	border: 1px solid @dothiv-magenta;
 }
 .legend{
 	font-size: @dothiv-h3-fontsize;
@@ -98,8 +102,9 @@
 	position: relative;
 	width: 100%;
 	min-height: 35px;
-	border: 1px solid @dothiv-white;
+	border: 1px solid @dothiv-magenta;
 	background: @dothiv-magenta;
+	color: @dothiv-white;
 	&.text{
 		padding: 5px 7.5px;
 	}
