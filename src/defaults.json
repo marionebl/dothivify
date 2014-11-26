@@ -18,7 +18,7 @@
     "buttonBackground": "#e00073",
     "buttonHoverBackground": "#ff47a5",
     "buttonColor": "#ffffff",
-    "guardDate": true,
+    "guardDate": false,
     "guardDateMonth": 12,
     "guardDateDay": 1
 }
