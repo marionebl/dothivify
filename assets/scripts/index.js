@@ -13,3 +13,8 @@ document.addEventListener('DOMContentLoaded', function(){
 	document.addEventListener('submit', onSubmit, false);
 	document.addEventListener('change', onChange, false);
 });
+
+var targets = document.getElementsByClassName("stage-title");
+	window.onload = function() {
+		targets[0].className = targets[0].className + ' animated fadeInDown';
+};

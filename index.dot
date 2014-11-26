@@ -39,7 +39,7 @@
 		<div class="stage">
 			<article class="hero">
 				<strong class="demo">dothivify demo. </strong>
-				<h1 class="h h0">{{=it['heroheadline']}}</h1>
+				<h1 class="stage-title h h0">{{=it['heroheadline']}}</h1>
 				<p class="p">{{=it['herocopy']}}</p>
 				<div class="buttonrow">
 					<label for="output" class="button">{{=it['herobutton']}}</label>
