@@ -16,6 +16,19 @@ function dotHIVify(config) {
 		}
 	}
 
+	// Check for World AIDS day (YYY-12-01) if config.guardDate is true
+	if (options['guardDate']) {
+		var now = new Date();
+		now.setHours(0, 0, 0, 0);
+		var workson = new Date(now.getFullYear(), options['guardDateMonth'] - 1, options['guardDateDay']);
+		if (now.getTime() !== workson.getTime()) {
+			console.log(now);
+			console.log(workson);
+			console.log('!');
+			return;
+		}
+	}
+
 	var prefix = options['prefix']; // jshint ignore: line
 	var els = document.querySelectorAll(options['queries'].join(', ')); // jshint ignore: line
 	var replacement = dotHIVTemplate(options);

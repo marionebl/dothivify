@@ -17,5 +17,8 @@
     "buttonTarget": "_blank",
     "buttonBackground": "#e00073",
     "buttonHoverBackground": "#ff47a5",
-    "buttonColor": "#ffffff"
+    "buttonColor": "#ffffff",
+    "guardDate": true,
+    "guardDateMonth": 12,
+    "guardDateDay": 1
 }
