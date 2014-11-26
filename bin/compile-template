@@ -2,7 +2,13 @@
 var dot = require('dot');
 var fs = require('fs');
 var fields = require('../src/defaults');
+var path = require('path');
+var extend = require('util-extend');
 
+var langs = require('require-all')({
+	dirname: path.resolve(__dirname, '../assets/lang'),
+	filter: '(.*).json'
+});
 
 fs.readFile('./index.dot', function(err, templateContent){
 	if (err) {
@@ -23,12 +29,23 @@ fs.readFile('./index.dot', function(err, templateContent){
 			source: sourceContent
 		};
 
-		fs.writeFile('./index.html', template(data, function(err){
-			if (err) {
-				console.log(err);
-				return process.exit(1);
-			}
-			process.exit(0);
-		}));
+		data.langs = Object.keys(langs).map(function(lang){
+			var suffix = lang !== 'en' ? '_' + lang : '';
+			return {
+				file: './index' + suffix + '.html',
+				label: lang.toUpperCase()
+			};
+		});
+
+		Object.keys(langs).forEach(function(lang){
+			data = extend(data, langs[lang]);
+			var suffix = lang !== 'en' ? '_' + lang : '';
+			fs.writeFile('./index' + suffix + '.html', template(data, function(err){
+				if (err) {
+					console.log(err);
+					return process.exit(1);
+				}
+			}));
+		});
 	});
 });

@@ -75,7 +75,9 @@
     "mkdirp": "^0.5.0",
     "node-static": "^0.7.6",
     "pretty-bytes": "^1.0.1",
-    "uglify": "^0.1.0"
+    "require-all": "0.0.8",
+    "uglify": "^0.1.0",
+    "util-extend": "^1.0.1"
   },
   "dependencies": {
     "raf": "^2.0.4"

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>dotHIVify</title>
-	<meta name="description" content="dothiv. A dot making the difference.">
+	<meta name="description" content="{{=it['metadescription']}}">
 	<meta name="viewport" content="width=640">
 	<link rel="stylesheet" href="public/index.min.css">
 	<link rel="apple-touch-icon" sizes="57x57" href="public/apple-touch-icon-57x57.png">
@@ -25,19 +25,24 @@
 </head>
 <body class="dothiv">
 	<header class="header">
-		<a class="logo" target="_blank" href="https://click4life.hiv" title="Change to click4life.hiv">
+		<a class="logo" target="_blank" href="{{=it['logourl']}}" title="{{=it['logotitle']}}">
 			.hiv
 			<img class="visual" src="public/logo.jpg" width="75" height="43">
 		</a>
+		<aside class="languages">
+			{{~it['langs'] :lang:index}}
+				<a href="{{=lang['file']}}" class="language">{{=lang['label']}}</a>
+			{{~}}
+		</aside>
 	</header>
 	<main class="main">
 		<div class="stage">
 			<article class="hero">
 				<strong class="demo">dothivify demo. </strong>
-				<h1 class="h h0">A dot makes the difference.</h1>
-				<p class="p">You are just in the right place to help! Copy the Javascript snippet below and raise awareness for the .hiv campaign and its fight against AIDS – by simply transforming every dot on your website pink!</p>
+				<h1 class="h h0">{{=it['heroheadline']}}</h1>
+				<p class="p">{{=it['herocopy']}}</p>
 				<div class="buttonrow">
-					<label for="output" class="button">Help now!</label>
+					<label for="output" class="button">{{=it['herobutton']}}</label>
 				</div>
 			</article>
 		</div>
@@ -46,7 +51,7 @@
 			<div class="entry">
 				<div class="buttonrow">
 					<form class="js_generator" novalidate="novalidate">
-						<h3 class="h h3">Customize the snippet by changing the defaults below</h3>
+						<h3 class="h h3">{{=it['generatorheadline']}}</h3>
 						<fieldset class="fieldset">
 							<legend class="legend">
 								Content
@@ -137,7 +142,7 @@
 								Tech
 							</legend>
 							<label class="row">
-								<span class="label">Query strings to search in (JS array)</span>
+								<span class="label">Query strings to search in (comma delimited)</span>
 								<input name="queries" type="text" class="input text" value="{{=it['fields']['queries']}}">
 							</label>
 							<label class="row">
@@ -153,7 +158,7 @@
 								<input name="prefix" type="text" class="input text" value="{{=it['fields']['prefix']}}">
 							</label>
 						</fieldset>
-						<button type="submit" class="button generate-button">Generate snippet</button>
+						<button type="submit" class="button generate-button">{{=it['generatorbutton']}}</button>
 					</form>
 				</div>
 			</div>
@@ -161,31 +166,31 @@
 			<div class="exit">
 				<ul class="steps">
 					<li>
-						<h4 class="h h3">Copy</h4>
-						<p>Hit Cmd + C to copy the code snippet below.</p>
+						<h4 class="h h3">{{=it['steponeheadline']}}</h4>
+						<p>{{=it['steponecopy']}}</p>
 					</li>
 					<li>
-						<h4 class="h h3">Paste</h4>
-						<p>Paste it just before the closing &lt;body&gt; tag.</p>
+						<h4 class="h h3">{{=it['steptwoheadline']}}</h4>
+						<p>{{=it['steptwocopy']}}</p>
 					</li>
 					<li>
-						<h4 class="h h3">Be a hero</h4>
-						<p>Cheerio! You now help the fight against AIDS.</p>
+						<h4 class="h h3">{{=it['stepthreeheadline']}}</h4>
+						<p>{{=it['stepthreecopy']}}</p>
 					</li>
 				</ul>
 				<textarea class="output js_output" readonly="readonly"><script type="text/javascript">{{=it['source']}}window.dotHIVify({});</script>
 				</textarea>
 				<div class="buttonrow pullright">
-					<label for="entry" class="inline-button">Does not float your boat? Customize it.</label>
+					<label for="entry" class="inline-button">{{=it['configurebutton']}}</label>
 				</div>
 			</div>
 		</div>
 	</main>
 	<footer class="footer">
 		<ul class="nav">
-			<li><a target="_blank" href="https://click4life.hiv/en/c/imprint">Imprint</a></li>
-			<li><a target="_blank" href="https://click4life.hiv/en/c/contact">Contact</a></li>
-			<li><a target="_blank" href="https://github.com/marionebl/dothivify">Github</a></li>
+			<li><a target="_blank" href="https://click4life.hiv/en/c/imprint">{{=it['imprint']}}</a></li>
+			<li><a target="_blank" href="https://click4life.hiv/en/c/contact">{{=it['contact']}}</a></li>
+			<li><a target="_blank" href="https://github.com/marionebl/dothivify">{{=it['github']}}</a></li>
 		</ul>
 	</footer>
 	<script class="js_generator_template" type="x-custom/javascript">
