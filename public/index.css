@@ -229,6 +229,11 @@ a:visited {
 * {
   box-sizing: border-box;
 }
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
 .dothiv {
   background: #e00073;
   color: #e00073;
@@ -250,6 +255,62 @@ a:visited {
   margin: 0 auto;
   padding: 0 20px;
   width: 790px;
+}
+@media (max-width: 790px) {
+  .hero,
+  .footer,
+  .entry,
+  .exit {
+    width: 100%;
+    margin: 0;
+  }
+  .label.label {
+    font-size: 20px;
+    margin: 15px 0 10px 0;
+  }
+  .input.input {
+    font-size: 20px;
+  }
+  .row.row {
+    margin: 0;
+    width: 100%;
+  }
+  .demo.demo .dothiv-replacement-aside {
+    bottom: 0;
+  }
+  .hero.hero .p {
+    width: 100%;
+  }
+  .steps.steps {
+    display: block;
+  }
+  .steps.steps li {
+    display: block;
+    width: 100%;
+    max-width: none;
+    font-size: 20px;
+  }
+  .steps.steps li::before {
+    font-size: 25px;
+  }
+  .steps.steps li .h {
+    max-width: none;
+    margin: -10px 0 0 0;
+    font-size: 35px;
+  }
+  .steps.steps li p {
+    width: auto;
+    max-width: none;
+  }
+  .h3.h3,
+  .legend.legend {
+    font-size: 34px;
+  }
+  .inline-button.inline-button {
+    display: block;
+    font-size: 20px;
+    text-align: center;
+  }
 }
 .state {
   position: absolute;
@@ -425,43 +486,6 @@ a:visited {
 }
 .generate-button:hover {
   background-color: #a1a1a1;
-}
-.stage-title {
-  opacity: 0;
-}
-.animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-@-webkit-keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-.fadeInDown {
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
 }
 .header {
   position: relative;

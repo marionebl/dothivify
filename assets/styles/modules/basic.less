@@ -1,6 +1,11 @@
 *{
 	box-sizing: border-box;
 }
+html,
+body{
+	margin: 0;
+	padding: 0;
+}
 .dothiv{
 	background: @dothiv-background;
 	color: @dothiv-magenta;
@@ -22,4 +27,60 @@
 	margin: 0 auto;
 	padding: 0 @dothiv-base-x-padding;
 	width: @dothiv-width;
+}
+@media (max-width: 790px) {
+	.hero,
+	.footer,
+	.entry,
+	.exit {
+		width: 100%;
+		margin: 0;
+	}
+	.label.label{
+		font-size: 20px;
+		margin: 15px 0 10px 0;
+	}
+	.input.input{
+		font-size: 20px;
+	}
+	.row.row{
+		margin: 0;
+		width: 100%;
+	}
+	.demo.demo .dothiv-replacement-aside{
+		bottom: 0;
+	}
+	.hero.hero .p{
+		width: 100%;
+	}
+	.steps.steps{
+		display: block;
+		li{
+			display: block;
+			width: 100%;
+			max-width: none;
+			font-size: 20px;
+			&::before{
+				font-size: 25px;
+			}
+			.h{
+				max-width: none;
+				margin: -10px 0 0 0;
+				font-size: 35px;
+			}
+			p{
+				width: auto;
+				max-width: none;
+			}
+		}
+	}
+	.h3.h3,
+	.legend.legend{
+		font-size: 34px;
+	}
+	.inline-button.inline-button{
+		display: block;
+		font-size: 20px;
+		text-align: center;
+	}
 }

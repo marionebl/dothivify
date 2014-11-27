@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>dotHIVify</title>
 	<meta name="description" content="{{=it['metadescription']}}">
-	<meta name="viewport" content="width=640">
+	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="public/index.min.css">
 	<link rel="apple-touch-icon" sizes="57x57" href="public/apple-touch-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="public/apple-touch-icon-114x114.png">
