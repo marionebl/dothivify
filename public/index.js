@@ -15,6 +15,11 @@ document.addEventListener('DOMContentLoaded', function(){
 	document.addEventListener('change', onChange, false);
 });
 
+var targets = document.getElementsByClassName("stage-title");
+	window.onload = function() {
+		targets[0].className = targets[0].className + ' animated fadeInDown';
+};
+
 },{"../../src/":6,"./on-change":2,"./on-submit":3}],2:[function(require,module,exports){
 var scrollTo = require('animated-scrollto');
 
@@ -186,9 +191,6 @@ function dotHIVify(config) {
 		now.setHours(0, 0, 0, 0);
 		var workson = new Date(now.getFullYear(), options['guardDateMonth'] - 1, options['guardDateDay']);
 		if (now.getTime() !== workson.getTime()) {
-			console.log(now);
-			console.log(workson);
-			console.log('!');
 			return;
 		}
 	}
