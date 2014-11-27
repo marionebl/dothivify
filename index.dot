@@ -38,11 +38,9 @@
 	<main class="main">
 		<div class="stage">
 			<article class="hero">
-				<strong class="demo">
-					<input class="dothiv-state-revert" id="dothiv-state-revert" type="radio" name="dothiv" />
+				<div class="demo">
 					<label class="dothiv-replacement-wrapper">
 						<input class="dothiv-state" type="radio" name="dothiv" checked="checked"/>
-						<label class="dothiv-state-revert-trigger" for="dothiv-state-revert"></label>
 						<aside class="dothiv-replacement-aside">
 							<div>
 								<strong class="dothiv-h">{{=it['heroheadline']}}</strong>
@@ -53,7 +51,7 @@
 							</label>
 						</aside>
 					</label>
-				</strong>
+				</div>
 				<h1 class="h h0 stage-title">{{=it['heroheadline']}} </h1>
 				<p class="p">{{=it['herocopy']}}</p>
 				<div class="buttonrow">
