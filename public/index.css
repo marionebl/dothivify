@@ -260,12 +260,10 @@ a:visited {
   overflow: hidden;
 }
 .exit {
-  height: 0;
-  max-height: 0;
-  margin-top: 0;
+  margin-top: 40px;
   opacity: 0;
-  -webkit-transition: 0.5s opacity ease-in-out 0.5s, 1s max-height, 1s margin-top;
-          transition: 0.5s opacity ease-in-out 0.5s, 1s max-height, 1s margin-top;
+  -webkit-transition: 0.5s opacity ease-in-out;
+          transition: 0.5s opacity ease-in-out;
 }
 .output {
   display: block;
@@ -289,9 +287,6 @@ a:visited {
   height: auto;
 }
 .state:checked + .exit {
-  margin-top: 40px;
-  height: auto;
-  max-height: 800px;
   opacity: 1;
 }
 .steps {
@@ -426,43 +421,6 @@ a:visited {
 .generate-button:hover {
   background-color: #a1a1a1;
 }
-.stage-title {
-  opacity: 0;
-}
-.animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-@-webkit-keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-.fadeInDown {
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
-}
 .header {
   position: relative;
   padding: 20px 14px;
@@ -506,27 +464,6 @@ a:visited {
 }
 .demo .dothiv-replacement-wrapper {
   border: 1px solid #fefefe;
-  width: 30px;
-  height: 30px;
-  background: none;
-}
-.demo .dothiv-replacement-aside {
-  bottom: 40px;
-}
-.demo label.dothiv-state-revert-button {
-  box-sizing: border-box;
-  display: inline-block;
-  width: 100%;
-  margin-top: 10px;
-  padding: 3px 5px;
-  text-align: center;
-  text-decoration: none!important;
-  font-weight: bold;
-  color: #ffffff!important;
-  background: #e00073;
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 .nav {
   margin-top: 80px;
