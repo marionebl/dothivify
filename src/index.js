@@ -22,9 +22,6 @@ function dotHIVify(config) {
 		now.setHours(0, 0, 0, 0);
 		var workson = new Date(now.getFullYear(), options['guardDateMonth'] - 1, options['guardDateDay']);
 		if (now.getTime() !== workson.getTime()) {
-			console.log(now);
-			console.log(workson);
-			console.log('!');
 			return;
 		}
 	}
