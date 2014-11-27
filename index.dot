@@ -200,7 +200,7 @@
 						<p>{{=it['stepthreecopy']}}</p>
 					</li>
 				</ul>
-				<textarea class="output js_output" readonly="readonly"><script type="text/javascript">{{=it['source']}}window.dotHIVify({});</script>
+				<textarea class="output js_output" readonly="readonly"><script type="text/javascript">{{=it['reassurancecomment']}}{{=it['source']}}window.dotHIVify({});</script>
 				</textarea>
 				<div class="buttonrow pullright">
 					<label for="entry" class="inline-button">{{=it['configurebutton']}}</label>
@@ -216,6 +216,7 @@
 		</ul>
 	</footer>
 	<script class="js_generator_template" type="x-custom/javascript">
+		{{=it['reassurancecomment']}}
 		{{=it['source']}}
 	</script>
 	<script type="text/javascript" src="public/index.js"></script>

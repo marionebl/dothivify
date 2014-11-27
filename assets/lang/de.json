@@ -17,6 +17,7 @@
     "stepthreeheadline": "Held sein",
     "stepthreecopy": "Glückwunsch! Sie helfen jetzt im Kampf gegen AIDS.",
     "configurebutton": "Nicht ihr Bier? Jetzt anpassen.",
+    "reassurancecomment": "\n/**\n * AUTHOR\t\tdotHIV gemeinnuetziger e.V.\n * LICENSE\t\tMIT\n * REPOSITORY\t\thttps://github.com/marionebl/dothivify\n * This snippet was used for a one day campaign for .hiv turning all website dots pink.\n * It’s time guarded for DEC 1st of 2014. When over, you can delete it.\n **/\n",
     "imprint": "Impressum",
     "contact": "Kontakt",
     "github": "Github"
