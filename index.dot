@@ -43,11 +43,11 @@
 						<input class="dothiv-state" type="radio" name="dothiv" checked="checked"/>
 						<aside class="dothiv-replacement-aside">
 							<div>
-								<strong class="dothiv-h">{{=it['heroheadline']}}</strong>
-								The smallest billboard in the world to show your support for .hiv
+								<strong class="dothiv-h">{{=it['exampleheadline']}}</strong>
+								{{=it['examplecopy']}}
 							</div>
 							<label class="dothiv-state-revert-button" for="dothiv-state-revert">
-								OK!
+								{{=it['examplebutton']}}
 							</label>
 						</aside>
 					</label>
