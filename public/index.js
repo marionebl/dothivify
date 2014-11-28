@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', function(){
 	dothivify({
 		queries: ['.h0'],
 		diameter: '10px',
-		dotBackground: '#730C61'
+		dotBackground: '#730C61',
+		injectStyles: false
 	});
 
 	document.addEventListener('submit', onSubmit, false);
@@ -163,7 +164,8 @@ module.exports={
     "buttonColor": "#ffffff",
     "guardDate": false,
     "guardDateMonth": 12,
-    "guardDateDay": 1
+    "guardDateDay": 1,
+    "injectStyles": true
 }
 
 },{}],6:[function(require,module,exports){
@@ -208,9 +210,17 @@ function dotHIVify(config) {
 	detoggle.className = stateClass;
 	detoggle.id = prefix + '-state-revert';
 
-	// Construct styling
-	var sheet = document.createElement('style');
-	sheet.type = 'text/css';
+	if (options['injectStyles'] !== false) {
+		// Construct styling
+		var sheet = document.createElement('style');
+		sheet.type = 'text/css';
+		if (sheet.styleSheet) {
+			sheet.styleSheet.cssText = styles;
+		} else {
+			sheet.appendChild(document.createTextNode(styles));
+		}
+		document.head.appendChild(sheet);
+	}
 
 	// Construct dot template
 	var documentFragment = document.createDocumentFragment();
@@ -219,14 +229,7 @@ function dotHIVify(config) {
 	documentFragment.appendChild(container);
 	var dotTemplate = container.firstChild;
 
-	if (sheet.styleSheet) {
-		sheet.styleSheet.cssText = styles;
-	} else {
-		sheet.appendChild(document.createTextNode(styles));
-	}
-
 	// Inject styling and detoggle
-	document.head.appendChild(sheet);
 	document.body.appendChild(detoggle);
 
 	// Replace all the things.
