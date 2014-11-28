@@ -323,6 +323,19 @@ body {
     font-size: 20px;
     text-align: center;
   }
+  .nav.nav {
+    padding: 0;
+  }
+  .nav.nav li {
+    display: block;
+    padding: 0 0 15px 0;
+  }
+  .nav.nav a {
+    display: block;
+    padding: 10px 15px;
+    font-size: 20px;
+    border: 1px solid #fefefe;
+  }
 }
 .state {
   position: absolute;
