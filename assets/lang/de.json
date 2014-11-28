@@ -29,6 +29,7 @@
         "headline": "Der Kampf gegen AIDS beginnt mit einem Punkt.",
         "text": "Helfen Sie mit Ihrer eigenen .hiv-Domain und werden Sie Teil der .hiv-Bewegung!",
         "buttonText": "Jetzt helfen!",
-        "buttonHref": "https://click4life.hiv"
+        "buttonHref": "https://click4life.hiv",
+        "dateGuard": false
     }
 }

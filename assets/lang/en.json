@@ -29,6 +29,7 @@
         "headline": "A dot makes the difference.",
         "text": "Help with your own .hiv domain and be part of the .hiv movement.",
         "buttonText": "Help now!",
-        "buttonHref": "https://click4life.hiv/en/"
+        "buttonHref": "https://click4life.hiv/en/",
+        "dateGuard": false
     }
 }
