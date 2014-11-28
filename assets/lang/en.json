@@ -20,5 +20,15 @@
     "reassurancecomment": "\n/**\n * AUTHOR\t\tdotHIV gemeinnuetziger e.V.\n * LICENSE\t\tMIT\n * REPOSITORY\t\thttps://github.com/marionebl/dothivify\n * This snippet was used for a one day campaign for .hiv turning all website dots pink.\n * It’s time guarded for DEC 1st of 2014. When over, you can delete it.\n **/\n",
     "imprint": "Imprint",
     "contact": "Contact",
-    "github": "Github"
+    "github": "Github",
+    "defaults": {
+        "queries": [".h0"],
+        "diameter": "10px",
+        "dotBackground": "#730C61",
+        "injectStyles": false,
+        "headline": "A dot makes the difference.",
+        "text": "Help with your own .hiv domain and be part of the .hiv movement.",
+        "buttonText": "Help now!",
+        "buttonHref": "https://click4life.hiv/en/"
+    }
 }

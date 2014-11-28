@@ -221,6 +221,9 @@
 		{{=it['reassurancecomment']}}
 		{{=it['source']}}
 	</script>
+	<script class="js_snippet_defaults" type="application/json">
+		{{=it['defaults']}}
+	</script>
 	<script type="text/javascript" src="public/index.js"></script>
 </body>
 </html>

@@ -37,6 +37,7 @@ fs.readFile('./index.dot', function(err, templateContent){
 
 	Object.keys(langs).forEach(function(lang){
 		data = extend(data, langs[lang]);
+		data.defaults = JSON.stringify(data.defaults);
 		var suffix = lang !== 'en' ? '_' + lang : '';
 		fs.writeFile('./index' + suffix + '.html', template(data, function(err){
 			if (err) {
