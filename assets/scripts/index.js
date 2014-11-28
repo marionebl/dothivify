@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', function(){
 	dothivify({
 		queries: ['.h0'],
 		diameter: '10px',
-		dotBackground: '#730C61'
+		dotBackground: '#730C61',
+		injectStyles: false
 	});
 
 	document.addEventListener('submit', onSubmit, false);
