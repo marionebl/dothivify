@@ -30,7 +30,6 @@
 	<header class="header">
 		<a class="logo" target="_blank" href="{{=it['logourl']}}" title="{{=it['logotitle']}}">
 			.hiv
-			<img class="visual" src="public/logo.jpg" width="75" height="43">
 		</a>
 		<aside class="languages">
 			{{~it['langs'] :lang:index}}
