@@ -325,6 +325,7 @@ body {
   max-height: 0;
   margin-top: 0;
   opacity: 0;
+  visibility: hidden;
   -webkit-transition: 0.5s opacity ease-in-out 0.5s, 1s max-height, 1s margin-top;
           transition: 0.5s opacity ease-in-out 0.5s, 1s max-height, 1s margin-top;
 }
@@ -354,6 +355,7 @@ body {
   height: auto;
   max-height: 800px;
   opacity: 1;
+  visibility: visible;
 }
 .steps {
   display: table;
