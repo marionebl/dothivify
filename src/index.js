@@ -39,9 +39,17 @@ function dotHIVify(config) {
 	detoggle.className = stateClass;
 	detoggle.id = prefix + '-state-revert';
 
-	// Construct styling
-	var sheet = document.createElement('style');
-	sheet.type = 'text/css';
+	if (options['injectStyles'] !== false) {
+		// Construct styling
+		var sheet = document.createElement('style');
+		sheet.type = 'text/css';
+		if (sheet.styleSheet) {
+			sheet.styleSheet.cssText = styles;
+		} else {
+			sheet.appendChild(document.createTextNode(styles));
+		}
+		document.head.appendChild(sheet);
+	}
 
 	// Construct dot template
 	var documentFragment = document.createDocumentFragment();
@@ -50,14 +58,7 @@ function dotHIVify(config) {
 	documentFragment.appendChild(container);
 	var dotTemplate = container.firstChild;
 
-	if (sheet.styleSheet) {
-		sheet.styleSheet.cssText = styles;
-	} else {
-		sheet.appendChild(document.createTextNode(styles));
-	}
-
 	// Inject styling and detoggle
-	document.head.appendChild(sheet);
 	document.body.appendChild(detoggle);
 
 	// Replace all the things.

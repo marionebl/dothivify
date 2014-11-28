@@ -20,5 +20,6 @@
     "buttonColor": "#ffffff",
     "guardDate": false,
     "guardDateMonth": 12,
-    "guardDateDay": 1
+    "guardDateDay": 1,
+    "injectStyles": true
 }
