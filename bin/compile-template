@@ -18,34 +18,32 @@ fs.readFile('./index.dot', function(err, templateContent){
 
 	var template = dot.template(templateContent);
 
-	fs.readFile('./lib/index.min.js', function(err, sourceContent){
-		if (err) {
-			console.log(err);
-			return process.exit(1);
-		}
+	var jsSource = fs.readFileSync('./lib/index.min.js');
+	var cssSource = fs.readFileSync('./public/index.min.css');
 
-		var data = {
-			fields: fields,
-			source: sourceContent
+	var data = {
+		fields: fields,
+		source: jsSource,
+		css: cssSource
+	};
+
+	data.langs = Object.keys(langs).map(function(lang){
+		var suffix = lang !== 'en' ? '_' + lang : '';
+		return {
+			file: './index' + suffix + '.html',
+			label: lang.toUpperCase()
 		};
-
-		data.langs = Object.keys(langs).map(function(lang){
-			var suffix = lang !== 'en' ? '_' + lang : '';
-			return {
-				file: './index' + suffix + '.html',
-				label: lang.toUpperCase()
-			};
-		});
-
-		Object.keys(langs).forEach(function(lang){
-			data = extend(data, langs[lang]);
-			var suffix = lang !== 'en' ? '_' + lang : '';
-			fs.writeFile('./index' + suffix + '.html', template(data, function(err){
-				if (err) {
-					console.log(err);
-					return process.exit(1);
-				}
-			}));
-		});
 	});
+
+	Object.keys(langs).forEach(function(lang){
+		data = extend(data, langs[lang]);
+		var suffix = lang !== 'en' ? '_' + lang : '';
+		fs.writeFile('./index' + suffix + '.html', template(data, function(err){
+			if (err) {
+				console.log(err);
+				return process.exit(1);
+			}
+		}));
+	});
+
 });
