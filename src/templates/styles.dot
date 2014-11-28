@@ -168,7 +168,7 @@
 .{{=it['prefix']}}-replacement-wrapper a.{{=it['prefix']}}-cta:hover{
 	background: {{=it['buttonHoverBackground']}};
 }
-@media only screen and (max-device-width: 1024px) {
+@media only screen and (max-width: 700px) {
 	.{{=it['prefix']}}-replacement-wrapper > .{{=it['prefix']}}-replacement-aside{
 		position: fixed;
 		right: 0;
