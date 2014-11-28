@@ -9,6 +9,7 @@
 	background: {{=it['dotBackground']}};
 	border-radius: 50%;
 	cursor: pointer;
+	float: none;
 }
 .{{=it['prefix']}}-replacement-wrapper::before{
 	content: '';
@@ -17,21 +18,24 @@
 	height: 30px;
 	top: -15px;
 	left: -15px;
+	float: none;
 }
+.{{=it['prefix']}}-replacement-wrapper > .{{=it['prefix']}}-state,
 .{{=it['prefix']}}-state{
-	position: fixed;
-	top: 0;
-	left: -100000px;
+	position: fixed!important;
+	top: 0!important;
+	left: -100000px!important;
 }
-.{{=it['prefix']}}-state-revert{
+.{{=it['prefix']}}-replacement-wrapper > .{{=it['prefix']}}-state-revert{
 	display: none;
 }
-.{{=it['prefix']}}-replacement-aside{
+.{{=it['prefix']}}-replacement-wrapper > .{{=it['prefix']}}-replacement-aside{
 	z-index: 100001;
 	box-sizing: border-box;
 	position: absolute;
 	left: -1000px;
 	left: -200vw;
+	float: none;
 	bottom: {{=it.offset}};
 	width: 260px;
 	margin-left: -130px;
@@ -42,6 +46,8 @@
 	border: 1px solid #ddd;
 	box-shadow: 0 0 10px rgba(0,0,0,.15);
 	text-align: left;
+	text-shadow: none;
+	line-height: 18px;
 	font-size: {{=it['popoverFontSize']}};
 	font-family: 'Source Sans Pro', sans-serif;
 	line-height: {{=it['popoverLineHeight']}};
@@ -51,20 +57,20 @@
 	    -ms-transition: opacity .3s ease-in-out, margin .3s, left 0s .3s;
 	        transition: opacity .3s ease-in-out, margin .3s, left 0s .3s;
 }
-.{{=it['prefix']}}-replacement-aside p,
-.{{=it['prefix']}}-replacement-aside h{
+.{{=it['prefix']}}-replacement-wrapper > .{{=it['prefix']}}-replacement-aside p,
+.{{=it['prefix']}}-replacement-wrapper > .{{=it['prefix']}}-replacement-aside h{
 	line-height: 1.5em;
 }
-.{{=it['prefix']}}-replacement-aside a{
+.{{=it['prefix']}}-replacement-wrapper > .{{=it['prefix']}}-replacement-aside a{
 	line-height: 1.25em;
 }
-.{{=it['prefix']}}-h{
+.{{=it['prefix']}}-replacement-wrapper .{{=it['prefix']}}-h{
 	display: block;
 	color: {{=it['headlineColor']}};
 	font-weight: {{=it['headlineFontweight']}};
 	margin: .25em 0 .5em 0;
 }
-.{{=it['prefix']}}-state:checked + .{{=it['prefix']}}-state-revert-trigger{
+.{{=it['prefix']}}-replacement-wrapper .{{=it['prefix']}}-state:checked + .{{=it['prefix']}}-state-revert-trigger{
 	position: fixed;
 	z-index: 100000;
 	top: 0;
@@ -72,7 +78,7 @@
 	bottom: 0;
 	left: 0;
 }
-.{{=it['prefix']}}-state:checked ~ .{{=it['prefix']}}-replacement-aside{
+.{{=it['prefix']}}-replacement-wrapper .{{=it['prefix']}}-state:checked ~ .{{=it['prefix']}}-replacement-aside{
 	left: 50%;
 	opacity: 1;
 	margin-bottom: 0;
@@ -81,7 +87,7 @@
 	    -ms-transition: opacity .3s ease-in-out, margin .3s;
 	        transition: opacity .3s ease-in-out, margin .3s;
 }
-a.{{=it['prefix']}}-cta{
+.{{=it['prefix']}}-replacement-wrapper a.{{=it['prefix']}}-cta{
 	box-sizing: border-box;
 	display: inline-block;
 	width: 100%;
@@ -98,7 +104,7 @@ a.{{=it['prefix']}}-cta{
 	    -ms-transition: all .3s ease-in-out;
 	        transition: all .3s ease-in-out;
 }
-.{{=it['prefix']}}-replacement-aside::after{
+.{{=it['prefix']}}-replacement-wrapper > .{{=it['prefix']}}-replacement-aside::after{
 	content: '';
 	position: absolute;
 	bottom: -7px;
@@ -110,7 +116,7 @@ a.{{=it['prefix']}}-cta{
 	border-width: 7.5px 10px 0 10px;
 	border-color: {{=it['popoverBackground']}} transparent transparent transparent;
 }
-.{{=it['prefix']}}-replacement-aside::before{
+.{{=it['prefix']}}-replacement-wrapper > .{{=it['prefix']}}-replacement-aside::before{
 	content: '';
 	position: absolute;
 	bottom: -8px;
@@ -122,48 +128,48 @@ a.{{=it['prefix']}}-cta{
 	border-width: 7.5px 10px 0 10px;
 	border-color: #ddd transparent transparent transparent;
 }
-.down > .{{=it['prefix']}}-replacement-aside{
+.{{=it['prefix']}}-replacement-wrapper.down > .{{=it['prefix']}}-replacement-aside{
 	top: 100%;
 	bottom: auto;
 	margin-top: {{=it.offset}};
 }
-.down > .{{=it['prefix']}}-replacement-aside::after{
+.{{=it['prefix']}}-replacement-wrapper.down > .{{=it['prefix']}}-replacement-aside::after{
 	top: -7px;
 	bottom: auto;
 	border-width: 0 10px 7.5px 10px;
 	border-color: transparent transparent {{=it['popoverBackground']}} transparent;
 }
-.down > .{{=it['prefix']}}-replacement-aside::before{
+.{{=it['prefix']}}-replacement-wrapper.down > .{{=it['prefix']}}-replacement-aside::before{
 	top: -8px;
 	bottom: auto;
 	border-width: 0 10px 7.5px 10px;
 	border-color: transparent transparent #ddd transparent;
 }
-.left > .{{=it['prefix']}}-replacement-aside{
+.{{=it['prefix']}}-replacement-wrapper.left > .{{=it['prefix']}}-replacement-aside{
 	margin-left: -260px;
 }
-.left > .{{=it['prefix']}}-replacement-aside::after,
-.left > .{{=it['prefix']}}-replacement-aside::before{
+.{{=it['prefix']}}-replacement-wrapper.left > .{{=it['prefix']}}-replacement-aside::after,
+.{{=it['prefix']}}-replacement-wrapper.left > .{{=it['prefix']}}-replacement-aside::before{
 	left: 100%;
 	margin-left: -25px;
 }
-.right > .{{=it['prefix']}}-replacement-aside{
+.{{=it['prefix']}}-replacement-wrapper.right > .{{=it['prefix']}}-replacement-aside{
 	margin-left: 0;
 }
-.right > .{{=it['prefix']}}-replacement-aside::after,
-.right > .{{=it['prefix']}}-replacement-aside::before{
+.{{=it['prefix']}}-replacement-wrapper.right > .{{=it['prefix']}}-replacement-aside::after,
+.{{=it['prefix']}}-replacement-wrapper.right > .{{=it['prefix']}}-replacement-aside::before{
 	left: auto;
 	right: 100%;
 	margin-right: -25px;
 }
-a.{{=it['prefix']}}-cta{
+.{{=it['prefix']}}-replacement-wrapper a.{{=it['prefix']}}-cta{
 	color: #fff;
 }
-a.{{=it['prefix']}}-cta:hover{
+.{{=it['prefix']}}-replacement-wrapper a.{{=it['prefix']}}-cta:hover{
 	background: {{=it['buttonHoverBackground']}};
 }
 @media only screen and (max-device-width: 1024px) {
-	.{{=it['prefix']}}-replacement-aside{
+	.{{=it['prefix']}}-replacement-wrapper > .{{=it['prefix']}}-replacement-aside{
 		position: fixed;
 		right: 0;
 		bottom: 0;
@@ -181,7 +187,7 @@ a.{{=it['prefix']}}-cta:hover{
 		    -ms-transition: -ms-transform .3s ease-in-out;
 		        transition: transform .3s ease-in-out;
 	}
-	.{{=it['prefix']}}-state:checked ~ .{{=it['prefix']}}-replacement-aside{
+	.{{=it['prefix']}}-replacement-wrapper > .{{=it['prefix']}}-state:checked ~ .{{=it['prefix']}}-replacement-aside{
 		left: 0;
 		-webkit-transform: none;
 		   -moz-transform: none;
@@ -192,7 +198,7 @@ a.{{=it['prefix']}}-cta:hover{
 		    -ms-transition: -ms-transform .3s ease-in-out;
 		        transition: transform .3s ease-in-out;
 	}
-	.{{=it['prefix']}}-cta{
+	.{{=it['prefix']}}-replacement-wrapper .{{=it['prefix']}}-cta{
 		margin-top: 20px;
 	}
 }
